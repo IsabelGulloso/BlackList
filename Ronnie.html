@@ -91,10 +91,10 @@
     }
 
     /* 4 botones en la franja superior */
-    .zona-grip   { top: 2.3%; left: 34%;    width: 5%; height: 10%; }
-    .zona-sprint { top: 2.3%; left: 39.8%;  width: 5%; height: 10%; }
-    .zona-drag   { top: 2.3%; left: 45.7%;  width: 5%; height: 10%; }
-    .zona-drift  { top: 2.3%; left: 51.5%;  width: 5%; height: 10%; }
+    .Zona-Grip   { top: 2.3%; left: 34%;    width: 5%; height: 10%; }
+    .Zona-Sprint { top: 2.3%; left: 39.8%;  width: 5%; height: 10%; }
+    .Zona-Drag   { top: 2.3%; left: 45.7%;  width: 5%; height: 10%; }
+    .Zona-Drift  { top: 2.3%; left: 51.5%;  width: 5%; height: 10%; }
 
 
 /* Contenedor (no bloquea clics aunque sea visible) */
@@ -179,7 +179,7 @@ body.debug .debug-grid { display: block; }
 </style>
 </head>
 <body>
-  <div class="perfil">
+  <div class="Perfil">
 
     <!-- 🔹 Fondo fijo -->
     <img src="https://github.com/IsabelGulloso/BlackList/blob/main/Sprint1.png?raw=true" class="capa">
@@ -188,27 +188,27 @@ body.debug .debug-grid { display: block; }
     <img src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Fondo%20de%20Iconos.png?raw=true" class="capa">
 
     <!-- 🔹 Imagen del Piloto Blacklist (arranca con el primer link del array) -->
-    <img id="piloto-img" src="https://raw.githubusercontent.com/IsabelGulloso/BlackList/refs/heads/main/Test%20Imagen%200%20Piloto%20al%20Abrir.png" class="capa">
+    <img id="Piloto-img" src="https://raw.githubusercontent.com/IsabelGulloso/BlackList/refs/heads/main/Test%20Imagen%200%20Piloto%20al%20Abrir.png" class="capa">
 
     <!-- 🔹 Zona clickeable para cambiar entre las 3 imágenes del piloto -->
-    <div class="zona zona-piloto" onclick="cambiarImagenPiloto()"></div>
+    <div class="Zona Zona-Piloto" onclick="cambiarImagenPiloto()"></div>
 
     <!-- 🔹 Firma del Piloto Blacklist -->
-    <img id="firma-img" 
+    <img id="Firma-img" 
          src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Firma%2001.png?raw=true" 
          class="capa">
 
-    <div class="zona firma-piloto"
+    <div class="Zona Firma-Piloto"
          onmouseover="cambiarFirma('hover')"
          onmouseout="cambiarFirma('out')"
          onclick="window.open('https://tu-link-aqui.com', '_blank')">
     </div>
 
-    <!-- ===== NUEVO: Iconos de categorías en PNG ===== -->
-    <img id="icono-grip"   src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Grip%20Icon.png?raw=true"   class="capa icono-categoria">
-    <img id="icono-sprint" src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Sprint%20Icon.png?raw=true" class="capa icono-categoria">
-    <img id="icono-drag"   src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Drag%20Icon.png?raw=true"   class="capa icono-categoria">
-    <img id="icono-drift"  src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Drift%20Icon.png?raw=true"  class="capa icono-categoria">
+    <!-- ===== NUEVO: Iconos de categorías GRIP, SPRINT, DRAG y DRIFT ===== -->
+    <img id="Icono-Grip"   src="https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20GRIP%2001.png?raw=true"   class="capa icono-categoria">
+    <img id="Icono-Sprint" src="https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20SPRINT%2001.png?raw=true" class="capa icono-categoria">
+    <img id="Icono-Drag"   src="https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20DRAG%2001.png?raw=true"   class="capa icono-categoria">
+    <img id="Icono-Drift"  src="https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20DRIFT%2001.png?raw=true"  class="capa icono-categoria">
 
     <!-- Zonas clickeables -->
 <div class="zona-categoria zona-grip"   onclick="window.open('https://tu-link-grip.com','_blank')"></div>
