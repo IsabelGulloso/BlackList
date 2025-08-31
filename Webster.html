@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil Blacklist #15</title>
+  <style>
+    body {
+      margin: 0;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    } */
+
+    .perfil {
+      position: relative;
+      width: 100%;
+      max-width: 100vw;
+      max-height: 100vh;
+      aspect-ratio: 3264 / 1551;
+      overflow: hidden;
+    }
+
+.capa,
+.info-img {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* se ajustan al tamaño de la pantalla */
+  pointer-events: none;  /* 🚨 muy importante: no bloquean clics */
+}
+
+
+    /* 🔹 Zonas clickeables */
+    .zona {
+      position: absolute;
+      cursor: pointer;
+      border: 2px;  /* solo guía visual */
+      z-index: 2;            /* zonas encima de imágenes */
+    }
+    .zona:hover {
+      background: rgba(0, 0, 0, 0);
+    }
+
+    /* Zona para cambiar imagen del piloto */
+    .zona-piloto {
+      top: 0%;
+      left: 63%;
+      width: 36%;
+      height: 100%;
+    }
+
+    /* Zona de la firma */
+    .firma-piloto {
+      top: 74%;
+      left: 63%;
+      width: 21%;
+      height: 24%;
+    }
+
+    /* ===== NUEVO: Iconos de categorías ===== */
+    @keyframes parpadeo {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .icono-categoria {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+      z-index: 3;
+      opacity: 0;
+    }
+
+    .icono-categoria.activo {
+      opacity: 1;
+      animation: parpadeo var(--blink-speed, 1s) infinite;
+    }
+
+    .zona-categoria {
+      position: absolute;
+      cursor: pointer;
+      z-index: 4;
+    }
+
+    /* 4 botones en la franja superior */
+    .zona-grip   { top: 2.3%; left: 34%;    width: 5%; height: 10%; }
+    .zona-sprint { top: 2.3%; left: 39.8%;  width: 5%; height: 10%; }
+    .zona-drag   { top: 2.3%; left: 45.7%;  width: 5%; height: 10%; }
+    .zona-drift  { top: 2.3%; left: 51.5%;  width: 5%; height: 10%; }
+
+
+/* Contenedor (no bloquea clics aunque sea visible) */
+.info-img-container {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 2s ease;
+  pointer-events: none; /* nunca intercepta clics */
+}
+.info-img-container.visible {
+  opacity: 1;
+  /* pointer-events sigue en none */
+}
+
+/* Imagen de la bio (solo visual) */
+.info-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Área clickeable (activa solo cuando la bio es visible) */
+.info-img-clickable {
+  display: none;            /* oculta por defecto */
+  position: absolute;
+  top: 70.5%;
+  left: 38.1%;
+  width: 47.5%;
+  height: 55%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  pointer-events: auto;     /* sí recibe clics */
+  z-index: 6;               /* por encima de la imagen de bio */
+  /* background: rgba(255,0,0,0.3); */ /* activar para ver */
+}
+
+/* Cuando la bio está visible, mostramos el target clickeable */
+.info-img-container.visible + .info-img-clickable {
+  display: block;
+}
+
+
+
+    /* .info-img.visible {
+      /* opacity: 1;  aparece suavemente  */
+    }
+
+
+  
+/* === DEBUG: pinta las zonas para ver su posición/tamaño === */
+body.debug .zona,
+body.debug .zona-categoria {
+  background: rgba(0, 128, 255, 0.25);
+  outline: 2px dashed #0080ff;
+}
+
+body.debug #info-click,
+body.debug .info-img-clickable {
+  background: rgba(0, 255, 0, 0.25);
+  outline: 2px dashed #00c853;
+}
+
+/* Rejilla de ayuda (10x10) */
+.debug-grid {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(to right, rgba(255,255,255,.15) 0 1px, transparent 1px 10%),
+    repeating-linear-gradient(to bottom, rgba(255,255,255,.15) 0 1px, transparent 1px 10%);
+}
+body.debug .debug-grid { display: block; }
+
+</style>
+</head>
+<body>
+  <div class="perfil">
+
+    <!-- 🔹 Fondo fijo -->
+    <img src="https://github.com/IsabelGulloso/BlackList/blob/main/Sprint1.png?raw=true" class="capa">
+
+    <!-- 🔹 TEST BLACKLIST FONDO ICONOS DE FONDO - Imagen secundaria encima del fondo -->
+    <img src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Fondo%20de%20Iconos.png?raw=true" class="capa">
+
+    <!-- 🔹 Imagen del Piloto Blacklist (arranca con el primer link del array) -->
+    <img id="piloto-img" src="https://raw.githubusercontent.com/IsabelGulloso/BlackList/refs/heads/main/Test%20Imagen%200%20Piloto%20al%20Abrir.png" class="capa">
+
+    <!-- 🔹 Zona clickeable para cambiar entre las 3 imágenes del piloto -->
+    <div class="zona zona-piloto" onclick="cambiarImagenPiloto()"></div>
+
+    <!-- 🔹 Firma del Piloto Blacklist -->
+    <img id="firma-img" 
+         src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Firma%2001.png?raw=true" 
+         class="capa">
+
+    <div class="zona firma-piloto"
+         onmouseover="cambiarFirma('hover')"
+         onmouseout="cambiarFirma('out')"
+         onclick="window.open('https://tu-link-aqui.com', '_blank')">
+    </div>
+
+    <!-- ===== NUEVO: Iconos de categorías en PNG ===== -->
+    <img id="icono-grip"   src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Grip%20Icon.png?raw=true"   class="capa icono-categoria">
+    <img id="icono-sprint" src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Sprint%20Icon.png?raw=true" class="capa icono-categoria">
+    <img id="icono-drag"   src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Drag%20Icon.png?raw=true"   class="capa icono-categoria">
+    <img id="icono-drift"  src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Blacklist%20Drift%20Icon.png?raw=true"  class="capa icono-categoria">
+
+    <!-- Zonas clickeables -->
+<div class="zona-categoria zona-grip"   onclick="window.open('https://tu-link-grip.com','_blank')"></div>
+<div class="zona-categoria zona-sprint" onclick="window.open('https://tu-link-sprint.com','_blank')"></div>
+<div class="zona-categoria zona-drag"   onclick="window.open('https://tu-link-drag.com','_blank')"></div>
+<div class="zona-categoria zona-drift"  onclick="window.open('https://tu-link-drift.com','_blank')"></div>
+
+
+
+<!-- ===== NUEVO: Imagen de información larga ===== -->
+<div id="info-container" class="info-img-container">
+  <img id="info-img" 
+       src="https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Biografia%20completa.png?raw=true" 
+       class="info-img">
+</div>
+
+<!-- 🔹 Zona clickeable para cerrar la bio (sibling, encima) -->
+<div id="info-click" class="info-img-clickable" onclick="cerrarBio()"></div>
+
+
+</div>
+
+
+
+  </div>
+
+  <script>
+    // Lista de imágenes del piloto
+    const imagenesPiloto = [
+      "https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%201%20Piloto.png?raw=true",
+      "https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%202%20Piloto.png?raw=true",
+      "https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%203%20Piloto.png?raw=true"
+    ];
+
+    let indiceActual = 0;
+    document.getElementById("piloto-img").src = imagenesPiloto[0];
+
+    function cambiarImagenPiloto() {
+      indiceActual = (indiceActual + 1) % imagenesPiloto.length;
+      document.getElementById("piloto-img").src = imagenesPiloto[indiceActual];
+    }
+
+    // Imágenes de la firma
+    const firmas = {
+      init: "https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Firma%2001.png?raw=true",
+      hover: "https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Firma%2002.png?raw=true",
+      out:   "https://github.com/IsabelGulloso/BlackList/blob/main/Test%20Imagen%20Firma%2001.png?raw=true"
+    };
+
+    function cambiarFirma(action) {
+      const firmaImg = document.getElementById("firma-img");
+      firmaImg.src = firmas[action];
+    }
+
+    /* ===== NUEVO: Control de iconos Grip/Sprint/Drag/Drift ===== */
+    const iconConfig = {
+      grip:   { activo: true, velocidad: "1s" },
+      sprint: { activo: true, velocidad: "1s" },
+      drag:   { activo: true, velocidad: "1s" },
+      drift:  { activo: true, velocidad: "1s" }
+    };
+
+    function initIconosCategorias() {
+      for (const [nombre, cfg] of Object.entries(iconConfig)) {
+        const el = document.getElementById(`icono-${nombre}`);
+        if (!el) continue;
+        el.style.setProperty("--blink-speed", cfg.velocidad);
+        if (cfg.activo) {
+          el.classList.add("activo");
+        } else {
+          el.classList.remove("activo");
+        }
+      }
+    }
+
+    initIconosCategorias();
+
+    function toggleIcono(nombre) {
+      const el = document.getElementById(`icono-${nombre}`);
+      if (!el) return;
+      el.classList.toggle("activo");
+      iconConfig[nombre].activo = el.classList.contains("activo");
+    }
+
+    /* ===== NUEVO: Control de la imagen de información ===== */
+const infoContainer = document.getElementById("info-container");
+
+// Aparece automáticamente después de 3 segundos al cargar
+setTimeout(() => {
+  infoContainer.classList.add("visible");
+}, 3000);
+
+// Función para cerrar la bio
+function cerrarBio() {
+  infoContainer.classList.remove("visible");
+
+  // 🔹 Reaparece sola después de 5 segundos
+  setTimeout(() => {
+    infoContainer.classList.add("visible");
+  }, 5000);
+}
+
+/* ===== FIN NUEVO ===== */
+
+// Pulsa la tecla D para activar/desactivar el modo debug
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 'SinAsignarTecla') {
+    document.body.classList.toggle('debug');
+  }
+});
+
+  </script>
+<audio id="perfil-music" autoplay loop hidden>
+  <source src="https://github.com/IsabelGulloso/BlackList/raw/refs/heads/main/CITY%20OF%20ANGELS.mp3
+">
+  Tu navegador no soporta audio HTML5.
+</audio>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("perfil-music");
+
+  // Volumen inicial = 0 (silencio)
+  audio.volume = 0.0;
+
+  // Volumen final (ajústalo entre 0.0 y 1.0 → 1.0 = 100%)
+  const volumenFinal = 0.7;  // = 70%
+  const duracionFade = 3000; // = 3 segundos
+
+  // Aseguramos que empiece a reproducir (por autoplay algunas veces hay bloqueo)
+  audio.play().catch(err => console.log("Autoplay bloqueado:", err));
+
+  // Animación de fade in progresivo
+  let start = null;
+  function fadeStep(timestamp) {
+    if (!start) start = timestamp;
+    let progreso = (timestamp - start) / duracionFade;
+    if (progreso < 1) {
+      audio.volume = volumenFinal * progreso;
+      requestAnimationFrame(fadeStep);
+    } else {
+      audio.volume = volumenFinal;
+    }
+  }
+  requestAnimationFrame(fadeStep);
+});
+</script>
+
+
+  <!-- 🎵 Audio del perfil -->
+  <audio id="perfil-music" autoplay loop hidden>
+    <source src="none" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("perfil-music");
+    if (!audio) return;
+
+    // Volumen inicial = 0 (silencio)
+    audio.volume = 0.0;
+
+    // Volumen final (0.0 a 1.0)
+    const volumenFinal = 0.7;  // 70%
+    const duracionFade = 3000; // 3 segundos
+
+    // Iniciar reproducción
+    audio.play().catch(err => console.log("Autoplay bloqueado:", err));
+
+    // Animación de fade in
+    let start = null;
+    function fadeStep(timestamp) {
+      if (!start) start = timestamp;
+      let progreso = (timestamp - start) / duracionFade;
+      if (progreso < 1) {
+        audio.volume = volumenFinal * progreso;
+        requestAnimationFrame(fadeStep);
+      } else {
+        audio.volume = volumenFinal;
+      }
+    }
+    requestAnimationFrame(fadeStep);
+  });
+
+// Asegura reproducción con la primera interacción
+document.addEventListener("click", () => {
+  const audio = document.getElementById("perfil-music");
+  if (audio && audio.paused) {
+    audio.play();
+  }
+}, { once: true });
+
+
+  </script>
+
+</body>
+</html>
