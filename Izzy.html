@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fondos y Música</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Fondos (wallpapers) */
+    .fondo {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0; /* invisible al inicio */
+      transition: opacity 3s ease-in-out;
+      z-index: 1;
+    }
+
+    .fondo.visible {
+      opacity: 1; /* aparece poco a poco */
+    }
+  </style>
+</head>
+<body>
+  <!-- Fondos -->
+  <img src="wallpaper1.com" class="fondo">
+  <img src="wallpaper2.com" class="fondo">
+
+  <!-- Música -->
+  <audio id="perfil-music" autoplay hidden>
+    <source src="https://github.com/IsabelGulloso/BlackList/raw/refs/heads/main/BLACKLIST/Music/Blacklist%20Original/SHAPESHIFTER.mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    // ===== Fondos Fade-In =====
+    document.addEventListener("DOMContentLoaded", () => {
+      const fondos = document.querySelectorAll(".fondo");
+
+      // tiempos en ms para cada fondo
+      const tiempos = [2000, 6000];
+
+      fondos.forEach((fondo, index) => {
+        setTimeout(() => {
+          fondo.classList.add("visible");
+        }, tiempos[index] || 2000);
+      });
+    });
+
+    // ===== Música Fade-In =====
+    document.addEventListener("DOMContentLoaded", () => {
+      const audio = document.getElementById("perfil-music");
+      if (!audio) return;
+
+      audio.volume = 0.0;
+      const volumenFinal = 0.7;  // 70%
+      const duracionFade = 3000; // 3s
+      const inicioEnSegundos = 154; // punto de inicio en la canción
+
+      audio.currentTime = inicioEnSegundos;
+
+      audio.addEventListener("ended", () => {
+        audio.currentTime = 0;
+        audio.play();
+      });
+
+      audio.play().catch(err => console.log("Autoplay bloqueado:", err));
+
+      // animación de fade-in
+      let start = null;
+      function fadeStep(timestamp) {
+        if (!start) start = timestamp;
+        let progreso = (timestamp - start) / duracionFade;
+        if (progreso < 1) {
+          audio.volume = volumenFinal * progreso;
+          requestAnimationFrame(fadeStep);
+        } else {
+          audio.volume = volumenFinal;
+        }
+      }
+      requestAnimationFrame(fadeStep);
+    });
+
+    // aseguramos reproducción tras primera interacción si autoplay se bloquea
+    document.addEventListener("click", () => {
+      const audio = document.getElementById("perfil-music");
+      if (audio && audio.paused) {
+        audio.play();
+      }
+    }, { once: true });
+
+<script>
+  window.perfilConfig = {
+    iconos: {
+      grip:   { activo: true, velocidad: "1s" },
+      sprint: { activo: false, velocidad: "1s" },
+      drag:   { activo: true, velocidad: "2s" },
+      drift:  { activo: false, velocidad: "1s" }
+    },
+    imagenes: {
+      grip:   "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20GRIP%2001.png?raw=true",
+      sprint: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20SPRINT%2001.png?raw=true",
+      drag:   "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20DRAG%2001.png?raw=true",
+      drift:  "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20DRIFT%2001.png?raw=true"
+    }
+  };
+</script>
+
+
+  </script>
+</body>
+</html>
