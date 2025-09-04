@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Webster (Perfil Minimalista)</title>
+</head>
+<body>
+  <!-- Webster ya no muestra nada en sí mismo -->
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // === Fondos (z-index 5 con fade) ===
+    window.parent.postMessage({
+      type: "set-slot",
+      index: 5,
+      url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Fondos/Fondo%2001.png?raw=true",
+      effect: "fade"
+    }, "*");
+
+    // === Imagen bio (slot 40, con fade) ===
+    window.parent.postMessage({
+      type: "set-slot",
+      index: 40,
+      url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Bio/Webster%20Bio.png?raw=true",
+      effect: "fade"
+    }, "*");
+
+    // === Piloto (slot 41, hover y fade) ===
+    window.parent.postMessage({
+      type: "set-slot",
+      index: 41,
+      url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Pic/Webster%20Profile%2001.png?raw=true",
+      hover: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Pic/Webster%20Profile%2002.png?raw=true",
+      effect: "fade"
+    }, "*");
+
+    // === Firma (slot 42, fade) ===
+    window.parent.postMessage({
+      type: "set-slot",
+      index: 42,
+      url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Firma/Webster%20Firma%2001.png?raw=true",
+      effect: "fade"
+    }, "*");
+
+    // === Icono coche (slot 38, hover + clic + fade) ===
+    window.parent.postMessage({
+      type: "set-slot",
+      index: 38,
+      url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/Vehicle%20Icon%2001.png?raw=true",
+      hover: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/Vehicle%20Icon%2002.png?raw=true",
+      onclick: "https://nfs.fandom.com/wiki/Webster",
+      effect: "fade"
+    }, "*");
+
+    // === Descripción Bio (slot 44, fade) ===
+    window.parent.postMessage({
+      type: "set-slot",
+      index: 44,
+      url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Bio/Webster%20Descripci%C3%B3n.png?raw=true",
+      effect: "fade"
+    }, "*");
+
+    // === Icono de categoría GRIP (slot 43, hover y fade) ===
+    window.parent.postMessage({
+      type: "set-slot",
+      index: 43,
+      url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20GRIP%2001.png?raw=true",
+      hover: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20GRIP%2002.png?raw=true",
+      effect: "fade"
+    }, "*");
+
+    // (Opcional) repetir slot 43 con otros iconos como Sprint, Drag, Drift
+  });
+  </script>
+</body>
+</html>
