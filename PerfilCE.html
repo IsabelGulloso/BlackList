@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil Blacklist - Ejemplo Comunicación</title>
+</head>
+<body style="background:transparent; margin:0;">
+
+<script>
+// Cuando cargue el perfil, manda todos los datos a la página base
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Imagen del vehículo (slot 38)
+  window.parent.postMessage({
+    type: "set-slot",
+    index: 38,
+    url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/Vehicle%20Icon%2001.png?raw=true",
+    hover: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/Vehicle%20Icon%2002.png?raw=true",
+    onclick: "https://nfs.fandom.com/wiki/Webster",
+    effect: "fade"
+  }, "*");
+
+  // Imagen Bio (slot 40)
+  window.parent.postMessage({
+    type: "set-slot",
+    index: 40,
+    url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Bio/Webster%20Bio.png?raw=true",
+    effect: "fade"
+  }, "*");
+
+  // Foto del Piloto (slot 41)
+  window.parent.postMessage({
+    type: "set-slot",
+    index: 41,
+    url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Pic/Webster%20Profile%2001.png?raw=true",
+    hover: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Pic/Webster%20Profile%2002.png?raw=true",
+    effect: "fade"
+  }, "*");
+
+  // Firma del Piloto (slot 42)
+  window.parent.postMessage({
+    type: "set-slot",
+    index: 42,
+    url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Firma/Webster%20Firma%2001.png?raw=true",
+    effect: "fade"
+  }, "*");
+
+  // Iconos de categorías (slot 43)
+  window.parent.postMessage({
+    type: "set-slot",
+    index: 43,
+    url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20GRIP%2001.png?raw=true",
+    hover: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20GRIP%2002.png?raw=true",
+    effect: "blink",
+    blinkSpeed: "1s"
+  }, "*");
+
+  // Descripción Bio (slot 44)
+  window.parent.postMessage({
+    type: "set-slot",
+    index: 44,
+    url: "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Bio/Webster%20Descripci%C3%B3n.png?raw=true",
+    effect: "fade"
+  }, "*");
+
+});
+</script>
+
+</body>
+</html>
