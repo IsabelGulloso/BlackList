@@ -1,0 +1,51 @@
+{
+  "nombre": "Webster",
+  "fondos": [
+    {
+      "src": "https://github.com/IsabelGulloso/BlackList/blob/main/Fondo%20de%20Prueba%20Test.png?raw=true",
+      "delay": 6000
+    },
+    {
+      "src": "https://github.com/IsabelGulloso/BlackList/blob/main/20250702_231608.png?raw=true",
+      "delay": 15000
+    }
+  ],
+  "piloto": {
+    "imagenes": [
+      "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Pic/Webster%20Profile%2001.png?raw=true",
+      "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Pic/Webster%20Profile%2001.png?raw=true",
+      "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Pic/Webster%20Profile%2001.png?raw=true"
+    ],
+    "delay": 2000
+  },
+  "firma": {
+    "init": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Firma/Webster%20Firma%2001.png?raw=true",
+    "hover": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Firma/Webster%20Firma%2001.png?raw=true",
+    "out":   "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Piloto%20Firma/Webster%20Firma%2001.png?raw=true",
+    "delay": 4000
+  },
+  "iconos": {
+    "grip":   { "src": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20GRIP%2001.png?raw=true",   "activo": false, "velocidad": "1s", "link": "GRIP xd.png" },
+    "sprint": { "src": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20SPRINT%2001.png?raw=true", "activo": true,  "velocidad": "1s", "link": "SPRINT xd.png" },
+    "drag":   { "src": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20DRAG%2001.png?raw=true",   "activo": false, "velocidad": "1s", "link": "DRAG xd.png" },
+    "drift":  { "src": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/PERFIL%20ICON%20DRIFT%2001.png?raw=true",  "activo": false, "velocidad": "1s", "link": "DRIFT xd.png" }
+  },
+  "vehiculo": {
+    "src": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/Vehicle%20Icon%2001.png?raw=true",
+    "hover": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Menu/Vehicle%20Icon%2002.png?raw=true",
+    "link": "https://github.com/IsabelGulloso/BlackList/blob/main/Space.png?raw=true"
+  },
+  "bio": {
+    "imagen": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Bio/Webster%20Bio.png?raw=true",
+    "descripcion": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Racers/Original%20Racers/B05%20Webster/Bio/Webster%20Descripci%C3%B3n.png?raw=true",
+    "delayMostrar": 3000,
+    "delayReaparecer": 5000
+  },
+  "hud": "https://github.com/IsabelGulloso/BlackList/blob/main/BLACKLIST/Select%20Menu/HUD%20Icons%20Background.png?raw=true",
+  "musica": {
+    "src": "https://github.com/IsabelGulloso/BlackList/raw/refs/heads/main/BLACKLIST/Music/Blacklist%20Original/NINE%20THOU.mp3",
+    "fadeDuracion": 5000,
+    "volumen": 0.7,
+    "inicioEn": 0
+  }
+}
