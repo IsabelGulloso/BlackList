@@ -1,0 +1,89 @@
+BLACKLIST 1
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 2
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 3
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 4
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 5
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 6
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 7
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 8
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 9
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 10
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 11
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 12
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 13
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 14
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 15
+normal:"Azzy/Vehicle01.png"
+hover:"Azzy/Vehicle02.png"
+activo:"Azzy/Vehicle02.png"
+perfil:"Azzy/Azzy.html"
