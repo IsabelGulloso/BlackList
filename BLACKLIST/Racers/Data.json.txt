@@ -1,3 +1,0 @@
-{
-  "base_url": "https://raw.githubusercontent.com/IsabelGulloso/BlackList/refs/heads/main/BLACKLIST/Racers/Rebaño/"
-}
