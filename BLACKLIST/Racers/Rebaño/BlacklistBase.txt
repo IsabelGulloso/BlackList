@@ -1,0 +1,96 @@
+BLACKLIST 1
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 2
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 3
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 4
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 5
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 6
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 7
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 8
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 9
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 10
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 11
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 12
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 12
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 13
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 14
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+
+BLACKLIST 15
+normal:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+hover:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+activo:"https://github.com/IsabelGulloso/BlackList/blob/main/"
+perfil:"https://isabelgulloso.github.io/BlackList/BLACKLIST/Racers/Rebaño/"
+

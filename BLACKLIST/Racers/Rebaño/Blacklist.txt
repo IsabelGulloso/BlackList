@@ -1,0 +1,89 @@
+BLACKLIST 1
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 2
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 3
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 4
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 5
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 6
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 7
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 8
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 9
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 10
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 11
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 12
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 13
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 14
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
+
+BLACKLIST 15
+normal:"B10%20BARON%2001.png?raw=true"
+hover:"B10%20BARON%2002.png?raw=true"
+activo:"B10%20BARON%2002.png?raw=true"
+perfil:"Azzy/Azzy.html"
